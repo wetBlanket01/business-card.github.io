@@ -92,7 +92,7 @@ h3 {
 }
 
 .card__link:hover {
-  color: #3486ce;
+  color: #4facfe;
 }
 
 
@@ -100,12 +100,10 @@ h3 {
   max-width: 500px;
   justify-self: center;
   overflow: hidden;
-  border: 2px solid #000000;
-  border-radius: 15px;
-}
+  border: 3px solid #000000;
 
-.card__box-img {
-  animation: ava-bg 3s infinite alternate;
+  animation: ava-animate 5s infinite alternate;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
 }
 
 @media screen and (max-width: 978px) {
@@ -144,3 +142,34 @@ h3 {
     justify-self: center;
   }
 }
+
+
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 62% 38% 72% 28% / 67% 32% 68% 33%;
+  }
+
+  40% {
+    border-radius: 37% 63% 53% 47% / 67% 32% 68% 33%;
+  }
+
+  60% {
+    border-radius: 23% 77% 39% 61% / 78% 54% 46% 22%;
+  }
+
+  100% {
+    border-radius: 18% 82% 24% 76% / 43% 54% 46% 57%;
+  }
+}
+/*
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
+*/
